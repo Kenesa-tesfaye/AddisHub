@@ -1,0 +1,176 @@
+/* ── Page Shell ──────────────────────────────────────────────────────────── */
+.res-page {
+    min-height: 100vh;
+    background: #0E0E0E;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ── Main Content ────────────────────────────────────────────────────────── */
+.res-main {
+    flex: 1;
+    padding: 24px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* ── Section Header ──────────────────────────────────────────────────────── */
+.res-section-header {
+    margin-bottom: 13px;
+}
+.res-section-header h2 {
+    font-size: 13px;
+    font-weight: 500;
+    color: #888;
+    font-family: 'DM Sans', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+.res-section-header h2 span {
+    color: #C9941A;
+    margin-left: 6px;
+    font-size: 13px;
+}
+
+/* ── Resources Grid — 3 col desktop ─────────────────────────────────────── */
+.res-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* ── Events Grid — 2 col desktop ────────────────────────────────────────── */
+.res-events-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* ── Skeleton Loading ────────────────────────────────────────────────────── */
+.res-skeleton {
+    border-radius: 16px;
+    overflow: hidden;
+    background: #111;
+    border: 0.5px solid #1a1a1a;
+    height: 360px;
+}
+.skel-img {
+    width: 100%;
+    height: 220px;
+    background: linear-gradient(90deg, #1a1a1a 25%, #222 50%, #1a1a1a 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+.skel-body {
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.skel-line {
+    height: 12px;
+    border-radius: 6px;
+    background: linear-gradient(90deg, #1a1a1a 25%, #222 50%, #1a1a1a 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+.skel-line.short { width: 55%; }
+
+@keyframes shimmer {
+    0%   { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* ── Empty State ─────────────────────────────────────────────────────────── */
+.res-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+    text-align: center;
+    gap: 10px;
+}
+.res-empty-icon {
+    font-size: 48px;
+    margin-bottom: 8px;
+}
+.res-empty h3 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+}
+.res-empty p {
+    font-size: 13px;
+    color: #555;
+    font-family: 'DM Sans', sans-serif;
+}
+.res-empty-btn {
+    margin-top: 8px;
+    padding: 8px 20px;
+    background: transparent;
+    border: 0.5px solid #C9941A;
+    border-radius: 10px;
+    color: #C9941A;
+    font-size: 13px;
+    font-family: 'DM Sans', sans-serif;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.res-empty-btn:hover {
+    background: #C9941A;
+    color: #111;
+}
+
+/* ── Tablet — 2 col resources, 1 col events ─────────────────────────────── */
+@media (max-width: 1024px) {
+    .res-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+    .res-events-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+    .res-main {
+        padding: 20px 16px;
+    }
+}
+
+/* ── Small tablet ────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .res-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+    .res-events-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+}
+
+/* ── Mobile — 1 col ─────────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+    .res-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    .res-events-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    .res-main {
+        padding: 14px 12px;
+    }
+    .res-section-header h2 {
+        font-size: 13px;
+    }
+    .res-skeleton {
+        height: 300px;
+    }
+    .skel-img {
+        height: 180px;
+    }
+}

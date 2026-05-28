@@ -1,0 +1,381 @@
+/**
+ * Responsive Sidebar Styles
+ * 
+ * Desktop: Sticky sidebar (220px)
+ * Tablet: Sidebar visible but narrower (200px)
+ * Mobile: Drawer/hamburger menu toggle
+ */
+
+/* ===== DESKTOP (1024px+) ===== */
+
+
+@media (min-width: 1024px) {
+  /* Sidebar visible, sticky */
+  .pf-sidebar {
+    display: flex !important;
+    width: 220px !important;
+    position: sticky !important;
+    top: 80px !important;
+    height: fit-content !important;
+    border-radius: 16px !important;
+    border: 1px solid #1e1e1e !important;
+    background: #111111 !important;
+    flex-shrink: 0 !important;
+    overflow: hidden !important;
+    flex-direction: column !important;
+  }
+
+  .pf-sidebar-section {
+    padding: 12px 10px !important;
+    flex-direction: column !important;
+  }
+
+  .pf-sidebar-label {
+    font-size: 9px !important;
+    font-weight: 700 !important;
+    color: #555555 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1.5px !important;
+    padding: 4px 6px 8px !important;
+  }
+
+  .pf-sidebar-item {
+    padding: 10px 14px !important;
+    margin-bottom: 2px !important;
+  }
+}
+
+/* ===== TABLET (768px - 1023px) ===== */
+@media (max-width: 1023px) and (min-width: 768px) {
+  /* Sidebar narrower but still visible */
+  .pf-sidebar {
+    display: flex !important;
+    width: 200px !important;
+    position: sticky !important;
+    top: 80px !important;
+    height: fit-content !important;
+    max-height: calc(100vh - 100px) !important;
+    border-radius: 14px !important;
+    border: 1px solid #1e1e1e !important;
+    background: #111111 !important;
+    flex-shrink: 0 !important;
+    overflow: hidden !important;
+    flex-direction: column !important;
+  }
+
+  .pf-sidebar-section {
+    padding: 10px 8px !important;
+    flex-direction: column !important;
+  }
+
+  .pf-sidebar-label {
+    font-size: 8px !important;
+    font-weight: 700 !important;
+    color: #555555 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1.2px !important;
+    padding: 3px 5px 6px !important;
+  }
+
+  .pf-sidebar-item {
+    padding: 8px 12px !important;
+    font-size: 12px !important;
+    margin-bottom: 2px !important;
+  }
+
+  .pf-sidebar-item-label {
+    display: inline !important;
+  }
+
+  .pf-sidebar-item-badge {
+    font-size: 9px !important;
+  }
+}
+
+/* ===== MOBILE (< 768px) ===== */
+@media (max-width: 767px) {
+  /* ── Layout ── */
+  .pf-layout {
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+
+  /* ── Sidebar becomes a drawer ── */
+  .pf-sidebar {
+    top: 0 !important;
+    width: min(320px, 90vw) !important;
+    height: 100vh !important;
+    background: #111111 !important;
+    border: none !important;
+    border-left: 1px solid #1e1e1e !important;
+    border-radius: 0 !important;
+    flex-direction: column !important;
+    z-index: 99 !important;
+    max-height: none !important;
+    overflow-y: auto !important;
+    visibility: hidden;
+    position: fixed;
+    bottom: 100px !important;
+    right: 0 !important;
+    display: none;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    box-shadow: -4px 0 16px rgba(0, 0, 0, 0.5) !important;
+  }
+
+  /* ── Sidebar open state ── */
+  .pf-sidebar.open {
+    transform: translateX(0) !important;
+    visibility: visible !important;
+
+    display: block !important;
+  }
+
+  /* ── Overlay when drawer is open ── */
+  .pf-sidebar-overlay {
+    position: fixed !important;
+    inset: 0 !important;
+    background: rgba(0, 0, 0, 0.6) !important;
+    backdrop-filter: blur(4px) !important;
+    z-index: 98 !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transition: opacity 0.3s ease !important;
+  }
+
+  .pf-sidebar-overlay.active {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+
+  /* ── Sidebar sections ── */
+  .pf-sidebar-section {
+    padding: 12px 10px !important;
+    border-bottom: 1px solid #1e1e1e !important;
+    flex-direction: column !important;
+  }
+
+  .pf-sidebar-section:last-child {
+    border-bottom: none !important;
+  }
+
+  .pf-sidebar-label {
+    font-size: 9px !important;
+    font-weight: 700 !important;
+    color: #555555 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1.5px !important;
+    padding: 4px 6px 8px !important;
+    display: block !important;
+  }
+
+  .pf-sidebar-item {
+    padding: 12px 14px !important;
+    margin-bottom: 2px !important;
+    width: 100% !important;
+    font-size: 13px !important;
+  }
+
+  .pf-sidebar-item-label {
+    display: inline !important;
+  }
+
+  .pf-sidebar-item-badge {
+    font-size: 10px !important;
+  }
+
+  /* ── Hamburger menu button ── */
+  .pf-sidebar-toggle {
+    position: fixed !important;
+    bottom: 24px !important;
+    right: 24px !important;
+    z-index: 97 !important;
+    width: 56px !important;
+    height: 56px !important;
+    border-radius: 50% !important;
+    background: linear-gradient(135deg, #c9941a, #e0a820) !important;
+    border: none !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: #000 !important;
+    font-size: 24px !important;
+    box-shadow: 0 8px 24px rgba(201, 148, 26, 0.3) !important;
+    transition: all 0.3s ease !important;
+  }
+
+  .pf-sidebar-toggle:hover {
+    transform: scale(1.1) !important;
+    box-shadow: 0 12px 32px rgba(201, 148, 26, 0.4) !important;
+  }
+
+  .pf-sidebar-toggle:active {
+    transform: scale(0.95) !important;
+  }
+
+  /* ── Header with close button ── */
+  .pf-sidebar-header {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 16px 18px !important;
+    border-bottom: 1px solid #1e1e1e !important;
+    position: sticky !important;
+    top: 0 !important;
+    background: #111111 !important;
+    z-index: 1 !important;
+  }
+
+  .pf-sidebar-close {
+    background: none !important;
+    border: none !important;
+    color: #888888 !important;
+    cursor: pointer !important;
+    padding: 4px !important;
+    font-size: 20px !important;
+    transition: color 0.2s !important;
+  }
+
+  .pf-sidebar-close:hover {
+    color: #ffffff !important;
+  }
+}
+
+/* ===== SMALL MOBILE (< 480px) ===== */
+@media (max-width: 479px) {
+  .pf-sidebar {
+    width: 100vw !important;
+    right: 0 !important;
+  }
+
+  .pf-sidebar-section {
+    padding: 10px 8px !important;
+  }
+
+  .pf-sidebar-item {
+    padding: 10px 12px !important;
+    font-size: 12px !important;
+  }
+
+  .pf-sidebar-label {
+    font-size: 8px !important;
+    letter-spacing: 1.2px !important;
+    padding: 3px 5px 6px !important;
+  }
+
+  .pf-sidebar-toggle {
+    width: 50px !important;
+    height: 50px !important;
+    bottom: 16px !important;
+    right: 16px !important;
+    font-size: 20px !important;
+  }
+
+  .pf-sidebar-header {
+    padding: 14px 14px !important;
+  }
+}
+
+/* ===== SCROLLBAR STYLING ===== */
+.pf-sidebar::-webkit-scrollbar {
+  width: 4px !important;
+}
+
+.pf-sidebar::-webkit-scrollbar-track {
+  background: #161616 !important;
+}
+
+.pf-sidebar::-webkit-scrollbar-thumb {
+  background: #2a2a2a !important;
+  border-radius: 2px !important;
+}
+
+.pf-sidebar::-webkit-scrollbar-thumb:hover {
+  background: #c9941a88 !important;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.pf-sidebar {
+  animation: slideInRight 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pf-sidebar-overlay.active {
+  animation: fadeIn 0.3s ease;
+}
+
+/* ===== TRANSITIONS ===== */
+.pf-sidebar-item {
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.pf-sidebar-item:hover {
+  background: rgba(201, 148, 26, 0.1) !important;
+}
+
+.pf-sidebar-item.active {
+  background: rgba(201, 148, 26, 0.14) !important;
+  color: #c9941a !important;
+}
+
+/* ===== ACCESSIBILITY ===== */
+.pf-sidebar-item:focus-visible {
+  outline: 2px solid #c9941a !important;
+  outline-offset: 2px !important;
+  border-radius: 4px !important;
+}
+
+.pf-sidebar-toggle:focus-visible {
+  outline: 2px solid #c9941a !important;
+  outline-offset: 4px !important;
+}
+
+.pf-sidebar-close:focus-visible {
+  outline: 2px solid #c9941a !important;
+  outline-offset: 2px !important;
+  border-radius: 4px !important;
+}
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+  .pf-sidebar,
+  .pf-sidebar-overlay,
+  .pf-sidebar-item,
+  .pf-sidebar-toggle {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* ===== UTILITY CLASSES ===== */
+.pf-sidebar-hidden {
+  display: none !important;
+}
+
+.pf-sidebar-visible {
+  display: flex !important;
+}
+
+/* Body overflow when drawer is open (prevent scroll) */
+body.sidebar-open {
+  overflow: hidden !important;
+}

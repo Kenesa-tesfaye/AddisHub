@@ -1,0 +1,29 @@
+<svg width="180" height="170" viewBox="0 0 180 170" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="180" height="170" fill="#F4F9F6"/><g transform="translate(50, 0)">
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+<rect width="80" height="80" fill="#F4F9F6" rx="0"/>
+<line x1="40.00" y1="40.00" x2="40.00" y2="13.60" stroke="#161616" stroke-width="1.568" stroke-linecap="round" opacity="0.55"/>
+<line x1="40.00" y1="40.00" x2="62.86" y2="26.80" stroke="#161616" stroke-width="1.568" stroke-linecap="round" opacity="0.55"/>
+<line x1="40.00" y1="40.00" x2="62.86" y2="53.20" stroke="#161616" stroke-width="1.568" stroke-linecap="round" opacity="0.55"/>
+<line x1="40.00" y1="40.00" x2="40.00" y2="66.40" stroke="#161616" stroke-width="1.568" stroke-linecap="round" opacity="0.55"/>
+<line x1="40.00" y1="40.00" x2="17.14" y2="53.20" stroke="#161616" stroke-width="1.568" stroke-linecap="round" opacity="0.55"/>
+<line x1="40.00" y1="40.00" x2="17.14" y2="26.80" stroke="#161616" stroke-width="1.568" stroke-linecap="round" opacity="0.55"/>
+<line x1="40.00" y1="13.60" x2="62.86" y2="26.80" stroke="#161616" stroke-width="1.120" stroke-linecap="round" opacity="0.3"/>
+<line x1="62.86" y1="26.80" x2="62.86" y2="53.20" stroke="#161616" stroke-width="1.120" stroke-linecap="round" opacity="0.3"/>
+<line x1="62.86" y1="53.20" x2="40.00" y2="66.40" stroke="#161616" stroke-width="1.120" stroke-linecap="round" opacity="0.3"/>
+<line x1="40.00" y1="66.40" x2="17.14" y2="53.20" stroke="#161616" stroke-width="1.120" stroke-linecap="round" opacity="0.3"/>
+<line x1="17.14" y1="53.20" x2="17.14" y2="26.80" stroke="#161616" stroke-width="1.120" stroke-linecap="round" opacity="0.3"/>
+<line x1="17.14" y1="26.80" x2="40.00" y2="13.60" stroke="#161616" stroke-width="1.120" stroke-linecap="round" opacity="0.3"/>
+<circle cx="40.00" cy="13.60" r="6.800" fill="#161616" stroke="#161616" stroke-width="1.680"/>
+<circle cx="62.86" cy="26.80" r="6.800" fill="none" stroke="#161616" stroke-width="1.680"/>
+<circle cx="62.86" cy="53.20" r="6.800" fill="#161616" stroke="#161616" stroke-width="1.680"/>
+<circle cx="40.00" cy="66.40" r="6.800" fill="none" stroke="#161616" stroke-width="1.680"/>
+<circle cx="17.14" cy="53.20" r="6.800" fill="#161616" stroke="#161616" stroke-width="1.680"/>
+<circle cx="17.14" cy="26.80" r="6.800" fill="none" stroke="#161616" stroke-width="1.680"/>
+<polygon points="49.007,34.800 49.007,45.200 40.000,50.400 30.993,45.200 30.993,34.800 40.000,29.600" fill="#161616"/>
+<circle cx="40.00" cy="40.00" r="3.952" fill="#F4F9F6"/>
+</svg></g>
+<text x="90" y="116" text-anchor="middle" font-family="Sora, sans-serif" font-weight="800" font-size="26" fill="#161616" letter-spacing="-0.5">Addis</text>
+<text x="90" y="132" text-anchor="middle" font-family="Sora, sans-serif" font-weight="400" font-size="11" fill="#161616" letter-spacing="3.5" opacity="0.75">HUB</text>
+<text x="90" y="162" text-anchor="middle" font-family="Sora, sans-serif" font-weight="300" font-size="7.5" fill="#161616" letter-spacing="1.4" opacity="0.55">COMMUNITY RESOURCE HUB</text>
+</svg>

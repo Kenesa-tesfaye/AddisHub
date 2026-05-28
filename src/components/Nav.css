@@ -1,0 +1,500 @@
+/* ============================================================
+   Nav.css — CRH / Addis HUB navigation styles
+   Design tokens: Ethiopian-warm dark mode
+   ============================================================ */
+
+/* ── CSS variables ─────────────────────────────────────────── */
+:root {
+  --nav-height:    64px;
+  --nav-bg:        #0A0A0A;
+  --nav-border:    #1E1E1E;
+  --nav-gold:      #046032;
+  --nav-gold-h:    #046232;
+  --nav-green:     #3DB070;
+  --nav-green-d:   #1A6B3C;
+  --nav-text:      #FFFFFF;
+  --nav-text-sec:  #888888;
+  --nav-text-mut:  #555555;
+  --nav-danger:    #E05252;
+  --nav-card:      #111111;
+  --nav-card2:     #161616;
+  --nav-border2:   #2A2A2A;
+  --nav-blur:      blur(16px);
+  --nav-font-head: 'Syne', sans-serif;
+  --nav-font-body: 'DM Sans', sans-serif;
+  --nav-z:         100;
+  --nav-drawer-z:  200;
+}
+
+/* ── Base bar ──────────────────────────────────────────────── */
+.crh-nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--nav-height);
+  z-index: var(--nav-z);
+  background: var(--nav-bg);
+  border-bottom: 1px solid var(--nav-border);
+  transition: background 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Scrolled: glass effect */
+.crh-nav--scrolled {
+  background: rgba(10, 10, 10, 0.88);
+  backdrop-filter: var(--nav-blur);
+  -webkit-backdrop-filter: var(--nav-blur);
+  border-bottom-color: var(--nav-border2);
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.5);
+}
+
+/* ── Inner layout ──────────────────────────────────────────── */
+.crh-nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  gap: 16px;
+}
+
+/* ── Logo ──────────────────────────────────────────────────── */
+.crh-nav__logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
+  outline: none;
+  border-radius: 8px;
+  transition: opacity 0.2s;
+}
+.crh-nav__logo:hover  { opacity: 0.85; }
+.crh-nav__logo:focus-visible { box-shadow: 0 0 0 2px var(--nav-gold); }
+
+/* ── Desktop links ─────────────────────────────────────────── */
+.crh-nav__links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+  justify-content: center;
+}
+
+.crh-nav__link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-family: var(--nav-font-body);
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--nav-text-sec);
+  text-decoration: none;
+  letter-spacing: 0.2px;
+  transition: color 0.2s, background 0.2s;
+}
+.crh-nav__link:hover {
+  color: var(--nav-text);
+  background: rgba(255,255,255,0.05);
+}
+.crh-nav__link--active {
+  color: var(--nav-gold);
+  font-weight: 600;
+}
+.crh-nav__link--active:hover { background: rgba(201,148,26,0.08); }
+
+/* Active underline dot */
+.crh-nav__dot {
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px; height: 4px;
+  border-radius: 50%;
+  background: var(--nav-gold);
+}
+
+/* Admin link */
+.crh-nav__link--admin {
+  color: var(--nav-green);
+}
+.crh-nav__link--admin:hover { color: var(--nav-green); background: rgba(61,176,112,0.08); }
+.crh-nav__link--admin.crh-nav__link--active { color: var(--nav-green); }
+
+/* ── Auth area ─────────────────────────────────────────────── */
+.crh-nav__auth {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.crh-nav__auth-btns {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Buttons */
+.crh-nav__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 8px 18px;
+  border-radius: 10px;
+  font-family: var(--nav-font-body);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.crh-nav__btn--ghost {
+  color: var(--nav-gold);
+  background: transparent;
+  border: 1px solid rgba(201,148,26,0.35);
+}
+.crh-nav__btn--ghost:hover {
+  background: rgba(201,148,26,0.1);
+  border-color: var(--nav-gold);
+}
+.crh-nav__btn--primary {
+  color: #000;
+  background: var(--nav-gold);
+}
+.crh-nav__btn--primary:hover { background: var(--nav-gold-h); }
+.crh-nav__btn--danger-full {
+  width: 100%;
+  color: var(--nav-danger);
+  background: rgba(224,82,82,0.1);
+  border: 1px solid rgba(224,82,82,0.25);
+}
+.crh-nav__btn--danger-full:hover { background: rgba(224,82,82,0.2); }
+.crh-nav__btn--ghost-full {
+  flex: 1;
+  color: var(--nav-gold);
+  background: transparent;
+  border: 1px solid rgba(201,148,26,0.35);
+}
+.crh-nav__btn--ghost-full:hover { background: rgba(201,148,26,0.1); }
+.crh-nav__btn--primary-full {
+  flex: 1;
+  color: #000;
+  background: var(--nav-gold);
+}
+.crh-nav__btn--primary-full:hover { background: var(--nav-gold-h); }
+
+/* ── User menu ─────────────────────────────────────────────── */
+.crh-nav__user-menu {
+  position: relative;
+}
+
+.crh-nav__user-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 12px 4px 4px;
+  border-radius: 40px;
+  border: 1px solid var(--nav-border2);
+  background: var(--nav-card);
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+  color: var(--nav-text);
+  font-family: var(--nav-font-body);
+}
+.crh-nav__user-btn:hover,
+.crh-nav__user-btn--open {
+  border-color: rgba(201,148,26,0.5);
+  background: var(--nav-card2);
+}
+.crh-nav__user-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--nav-text);
+  max-width: 90px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.crh-nav__chevron {
+  color: var(--nav-text-sec);
+  display: flex;
+  transition: transform 0.2s;
+}
+.crh-nav__chevron--up { transform: rotate(180deg); }
+
+/* Avatar */
+.nav-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1A6B3C, #C9941A);
+  color: #fff;
+  font-family: var(--nav-font-head);
+  font-weight: 700;
+  flex-shrink: 0;
+  overflow: hidden;
+  border: 2px solid rgba(201,148,26,0.4);
+}
+
+/* ── Dropdown ──────────────────────────────────────────────── */
+.crh-nav__dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  width: 240px;
+  background: var(--nav-card);
+  border: 1px solid var(--nav-border2);
+  border-radius: 14px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7), 0 4px 20px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-6px) scale(0.97);
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: calc(var(--nav-z) + 10);
+}
+.crh-nav__dropdown--open {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.crh-nav__drop-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: rgba(255,255,255,0.02);
+}
+.crh-nav__drop-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--nav-text);
+  font-family: var(--nav-font-head);
+}
+.crh-nav__drop-email {
+  font-size: 11px;
+  color: var(--nav-text-mut);
+  margin-top: 1px;
+  word-break: break-all;
+}
+.crh-nav__drop-divider {
+  height: 1px;
+  background: var(--nav-border);
+  margin: 0;
+}
+.crh-nav__drop-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 11px 16px;
+  font-family: var(--nav-font-body);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--nav-text-sec);
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.15s, color 0.15s;
+}
+.crh-nav__drop-item:hover {
+  background: rgba(255,255,255,0.04);
+  color: var(--nav-text);
+}
+.crh-nav__drop-item--admin { color: var(--nav-green); }
+.crh-nav__drop-item--admin:hover { color: var(--nav-green); }
+.crh-nav__drop-item--danger { color: var(--nav-danger); }
+.crh-nav__drop-item--danger:hover { background: rgba(224,82,82,0.08); color: var(--nav-danger); }
+
+/* ── Hamburger ─────────────────────────────────────────────── */
+.crh-nav__hamburger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid var(--nav-border2);
+  background: var(--nav-card);
+  color: var(--nav-text);
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+  flex-shrink: 0;
+}
+.crh-nav__hamburger:hover { border-color: var(--nav-gold); background: rgba(201,148,26,0.08); }
+.crh-nav__hamburger--open { border-color: var(--nav-gold); color: var(--nav-gold); }
+
+/* ── Backdrop ──────────────────────────────────────────────── */
+.crh-nav__backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: calc(var(--nav-drawer-z) - 1);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.crh-nav__backdrop--open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ── Mobile drawer ─────────────────────────────────────────── */
+.crh-nav__drawer {
+  position: fixed;
+  top: 0; left: 0; bottom: 0;
+  width: min(300px, 88vw);
+  background: var(--nav-card);
+  border-right: 1px solid var(--nav-border2);
+  z-index: var(--nav-drawer-z);
+  transform: translateX(-100%);
+  transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+.crh-nav__drawer--open { transform: translateX(0); }
+
+.crh-nav__drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--nav-border);
+  flex-shrink: 0;
+}
+.crh-nav__drawer-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px; height: 36px;
+  border-radius: 8px;
+  border: 1px solid var(--nav-border2);
+  background: none;
+  color: var(--nav-text-sec);
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+.crh-nav__drawer-close:hover { border-color: var(--nav-gold); color: var(--nav-gold); }
+
+.crh-nav__drawer-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--nav-border);
+  background: rgba(201,148,26,0.04);
+  flex-shrink: 0;
+}
+.crh-nav__drawer-user-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--nav-text);
+  font-family: var(--nav-font-head);
+}
+.crh-nav__drawer-user-email {
+  font-size: 11px;
+  color: var(--nav-text-mut);
+  margin-top: 1px;
+  word-break: break-all;
+}
+.crh-nav__admin-badge {
+  margin-left: auto;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--nav-green);
+  background: rgba(61,176,112,0.15);
+  border: 1px solid rgba(61,176,112,0.3);
+  padding: 3px 8px;
+  border-radius: 20px;
+  flex-shrink: 0;
+}
+
+.crh-nav__drawer-links {
+  list-style: none;
+  margin: 0;
+  padding: 12px 10px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.crh-nav__drawer-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-family: var(--nav-font-body);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--nav-text-sec);
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+.crh-nav__drawer-link:hover {
+  background: rgba(255,255,255,0.05);
+  color: var(--nav-text);
+}
+.crh-nav__drawer-link--active {
+  color: var(--nav-gold);
+  background: rgba(201,148,26,0.1);
+  font-weight: 600;
+}
+.crh-nav__drawer-link--admin { color: var(--nav-green); }
+.crh-nav__drawer-link--admin:hover { color: var(--nav-green); background: rgba(61,176,112,0.08); }
+
+.crh-nav__drawer-footer {
+  padding: 16px 20px;
+  border-top: 1px solid var(--nav-border);
+  flex-shrink: 0;
+}
+.crh-nav__drawer-auth-btns {
+  display: flex;
+  gap: 8px;
+}
+
+/* ── Page offset helper ────────────────────────────────────── */
+/* Add this class to any page wrapper to push content below nav */
+.crh-page {
+  padding-top: var(--nav-height);
+}
+
+/* ── Responsive breakpoints ────────────────────────────────── */
+@media (max-width: 900px) {
+  .crh-nav__links { display: none; }
+  .crh-nav__auth  { display: none; }
+  .crh-nav__hamburger { display: inline-flex; }
+}
+
+@media (max-width: 480px) {
+  .crh-nav__inner { padding: 0 16px; }
+}
+
+/* ── Focus styles (accessibility) ─────────────────────────── */
+.crh-nav__link:focus-visible,
+.crh-nav__btn:focus-visible,
+.crh-nav__hamburger:focus-visible,
+.crh-nav__user-btn:focus-visible,
+.crh-nav__drop-item:focus-visible,
+.crh-nav__drawer-link:focus-visible {
+  outline: 2px solid var(--nav-gold);
+  outline-offset: 2px;
+}

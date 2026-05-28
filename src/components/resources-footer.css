@@ -1,0 +1,258 @@
+/* ─── CRH Resources Footer ─────────────────────────────────────────────────── */
+
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@600;700&family=DM+Sans:wght@400;500&display=swap');
+
+.crh-footer {
+  width: 100%;
+  background: #0a0a0a;
+  position: relative;
+  margin-top: 80px;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* Gold glow top border */
+.crh-footer__glow-line {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    #0460326c 20%,
+    #0460326b 50%,
+    #0460326e 80%,
+    transparent 100%
+  );
+  box-shadow: 0 0 18px 2px #04603255;
+}
+
+/* Main grid */
+.crh-footer__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 56px 32px 40px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px;
+}
+
+/* ── Brand ── */
+.crh-footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.crh-footer__logo-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #04603222, #04603244);
+  border: 1px solid #04603255;
+  color: #046032;
+  font-size: 20px;
+}
+
+.crh-footer__logo-text {
+  font-family: 'Syne', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.crh-footer__tagline {
+  font-size: 13.5px;
+  color: #888;
+  line-height: 1.6;
+  margin: 0 0 18px;
+  max-width: 240px;
+}
+
+.crh-footer__location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.crh-footer__socials {
+  display: flex;
+  gap: 10px;
+}
+
+.crh-footer__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  border: 1px solid #1E1E1E;
+  background: #111;
+  color: #555;
+  font-size: 15px;
+  text-decoration: none;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.crh-footer__social-link:hover {
+  color: #046032;
+  border-color: #046032ab;
+  background: #0460320D;
+}
+
+/* ── Columns ── */
+.crh-footer__col-title {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-family: 'Syne', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: #046032;
+  margin: 0 0 20px;
+}
+
+.crh-footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.crh-footer__links--grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 12px;
+}
+
+.crh-footer__link {
+  font-size: 13.5px;
+  color: #666;
+  text-decoration: none;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+
+.crh-footer__link:hover {
+  color: #046032;
+}
+
+/* ── Status ── */
+.crh-footer__status {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  margin-bottom: 20px;
+}
+
+.crh-footer__status-row {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 13px;
+  color: #666;
+}
+
+.crh-footer__status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.crh-footer__status-dot--green {
+  background: #22c55e;
+  box-shadow: 0 0 6px #22c55e88;
+  animation: pulse-green 2.4s infinite;
+}
+
+.crh-footer__status-dot--yellow {
+  background: #046032;
+  box-shadow: 0 0 6px #04603288;
+  animation: pulse-gold 2.4s infinite;
+}
+
+@keyframes pulse-green {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+@keyframes pulse-gold {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.crh-footer__version {
+  font-size: 11.5px;
+  color: #333;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+/* ── Bottom bar ── */
+.crh-footer__bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 32px;
+  border-top: 1px solid #1A1A1A;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.crh-footer__copy {
+  font-size: 12.5px;
+  color: #3A3A3A;
+}
+
+.crh-footer__made {
+  font-size: 12.5px;
+  color: #3A3A3A;
+}
+
+.crh-footer__heart {
+  color: #046032;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .crh-footer__inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+
+  .crh-footer__brand {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 560px) {
+  .crh-footer__inner {
+    grid-template-columns: 1fr;
+    padding: 40px 20px 28px;
+    gap: 32px;
+  }
+
+  .crh-footer__links--grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .crh-footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 20px;
+    gap: 6px;
+  }
+}

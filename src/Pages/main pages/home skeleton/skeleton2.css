@@ -1,0 +1,90 @@
+.t {
+    background-color: #161616;
+    width: 90%;
+    left: 10vh;
+    top: 5px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    position: fixed;
+    font-weight: 300;
+    border-radius: 100px;
+    padding: 5px 20px;
+}
+
+.t .t-me {
+    display: flex;
+    gap: 10px;
+}
+.body{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.in-text-s{
+    max-width: 900px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+.card1-s{
+    background-color: #161616;
+    position: absolute;
+    display: flex;
+    gap: 2rem;
+    left: 100px;
+    width: 260px;
+    height: 200px;
+   padding: 20px;
+    bottom: 100px;
+   border-radius: 30px;
+}
+.card2-s{
+    background-color: #161616;
+   position: absolute;
+   gap: 1.5rem;
+   border-radius: 30px;
+   padding: 10px;
+   display: flex;
+    right: 70px;
+    width: 260px;
+    height: 200px;
+    bottom: 100px; 
+}
+.te-cr{
+    display: flex ;
+    flex-direction: column;
+    gap: 1.4rem;
+}
+.te-bk{
+    display: flex;
+    gap: 3rem;
+    flex-direction: column;
+    
+}
+.card-r-s{
+     width: 340px;
+    height: 400px;
+    position: relative;
+    border-radius: 20px;
+    border: 1px solid #494848a6;
+    overflow: hidden;
+    background-color: #111;
+}
+.card-bottom-s{
+    z-index: 5;
+    position: absolute;
+    z-index: 2;
+    bottom: 3px;
+    left: 3px;
+    right: 3px;
+    background-color: #000000;
+    top: 75%;
+    padding: 10px 0px 3px 20px;
+    border-radius: 20px;
+    color: #fff;
+}
