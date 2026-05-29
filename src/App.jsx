@@ -11,7 +11,6 @@ import Profile from "./Pages/user/Profile";
 import Userview from "./Pages/user/Userview";
 import { useState } from "react";
 import Home from "./Pages/main pages/home skeleton/Home";
-import Signup  from "./Pages/login/Signup";
 import Preloader from "./components/Preloader";      // ✅ already imported
 import PublicRoute from "./components/PublicRoute";
 import 'react-loading-skeleton/dist/skeleton.css'
@@ -19,6 +18,7 @@ import { SkeletonTheme } from "react-loading-skeleton";
 import Landing from "./Pages/main pages/Landing";
 import { useSelector} from "react-redux";
 import Carddetail from "./Pages/main pages/Card-Detail/Carddetail";
+import Signup from "./Pages/login/Signup";
 
 function App() {
   const [loading, setLoading] = useState(true);     // ✅ ADD THIS
