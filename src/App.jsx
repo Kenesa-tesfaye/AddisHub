@@ -18,7 +18,7 @@ import { SkeletonTheme } from "react-loading-skeleton";
 import Landing from "./Pages/main pages/Landing";
 import { useSelector} from "react-redux";
 import Carddetail from "./Pages/main pages/Card-Detail/Carddetail";
-import Signup from "./Pages/login/Signup";
+import Signup from "./Pages/login/signup";
 
 function App() {
   const [loading, setLoading] = useState(true);     // ✅ ADD THIS
@@ -43,7 +43,7 @@ function App() {
 
             <Route path="/resources" element={<ProtectedRoute><Resources /></ProtectedRoute>} />
             <Route path='/login' element={<PublicRoute><Login /></PublicRoute>} />
-            <Route path='/signup' element={<PublicRoute><Signup /></PublicRoute>} />
+            <Route path='/signup' element={<PublicRoute><Signup/></PublicRoute>} />
             <Route path="/map" element={<ProtectedRoute><Mapview /></ProtectedRoute>} />
             <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
             <Route path="/User-view" element={<ProtectedRoute><Userview /></ProtectedRoute>} />
