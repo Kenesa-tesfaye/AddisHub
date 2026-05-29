@@ -17,8 +17,8 @@ import 'react-loading-skeleton/dist/skeleton.css'
 import { SkeletonTheme } from "react-loading-skeleton";
 import Landing from "./Pages/main pages/Landing";
 import { useSelector} from "react-redux";
-import Carddetail from "./Pages/main pages/Card-Detail/Carddetail";
 import Signup from "./Pages/login/signup";
+import Carddetail from "./Pages/main pages/Card-Detail/Carddetail";
 
 function App() {
   const [loading, setLoading] = useState(true);     // ✅ ADD THIS
