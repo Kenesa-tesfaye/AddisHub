@@ -17,7 +17,7 @@ import 'react-loading-skeleton/dist/skeleton.css'
 import { SkeletonTheme } from "react-loading-skeleton";
 import Landing from "./Pages/main pages/Landing";
 import { useSelector} from "react-redux";
-import Signup from "./Pages/login/signup";
+import Signup from "./Pages/login/Signup";
 import Carddetail from "./Pages/main pages/Card-Detail/Carddetail";
 
 function App() {
