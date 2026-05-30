@@ -10,7 +10,6 @@ import Createadmin from "./Pages/admin/Createadmin";
 import Profile from "./Pages/user/Profile";
 import Userview from "./Pages/user/Userview";
 import { useState } from "react";
-import Home from "./Pages/main pages/home skeleton/Home";
 import Preloader from "./components/Preloader";      // ✅ already imported
 import PublicRoute from "./components/PublicRoute";
 import 'react-loading-skeleton/dist/skeleton.css'
