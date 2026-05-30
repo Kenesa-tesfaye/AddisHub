@@ -1,4 +1,4 @@
-import Sidebar from "./sidebar";
+import Sidebar from "./Sidebar";
 import Topbar from "./Topbar";
 import './sidebar.css'
 import Dashboard from "./ad_Components/Dashboard";
