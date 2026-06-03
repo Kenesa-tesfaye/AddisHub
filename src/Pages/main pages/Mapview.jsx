@@ -3,18 +3,18 @@
  * Route: /map
  *
  * FEATURES:
- *   ✅ Leaflet via CDN (no npm needed)
- *   ✅ CartoDB Voyager tiles (warm, dark-friendly)
- *   ✅ Marker clustering (Leaflet.markercluster)
- *   ✅ Resources (gold hexagon) + Events (green circle) markers
- *   ✅ Category + type filtering
- *   ✅ Card list ↔ map sync (click card → fly to marker, click marker → highlight card)
- *   ✅ Google Maps routing button (in card + popup)
- *   ✅ User geolocation + distance display
- *   ✅ Dark mode — full CRH design system
- *   ✅ Mobile responsive (map top / cards bottom)
- *   ✅ Debounced search, memoized filtering
- *   ✅ Real API: GET /resources + GET /events
+ *    Leaflet via CDN (no npm needed)
+ *  CartoDB Voyager tiles (warm, dark-friendly)
+ *   Marker clustering (Leaflet.markercluster)
+ *  Resources (gold hexagon) + Events (green circle) markers
+ *   Category + type filtering
+ *   Card list ↔ map sync (click card → fly to marker, click marker → highlight card)
+ *    Google Maps routing button (in card + popup)
+ *   User geolocation + distance display
+ *   Dark mode — full CRH design system
+ *   Mobile responsive (map top / cards bottom)
+ *  Debounced search, memoized filtering
+ *  Real API: GET /resources + GET /events
  *
  * SETUP:
  *   No extra npm installs — Leaflet loads via CDN.
