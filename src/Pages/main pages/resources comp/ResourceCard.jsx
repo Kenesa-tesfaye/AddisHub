@@ -39,7 +39,7 @@ function ResourceCard({ resource }) {
         const likedResources     = res.data?.liked_resources || [];
         const favouriteResources = res.data?.favourite_resources || [];
 
-        // ✅ SEPARATE columns — like ≠ bookmark
+        //SEPARATE columns — like ≠ bookmark
         setLiked(likedResources.includes(resource.id));
         setBookmarked(favouriteResources.includes(resource.id));
       })
@@ -115,7 +115,7 @@ function ResourceCard({ resource }) {
         : favs.filter((id) => id !== resource.id);
 
       await api.put(`/auth/${user.id}`, { favourite_resources: updated });
-      // ✅ Stored in favourite_resources — separate from liked_resources
+      // Stored in favourite_resources — separate from liked_resources
     } catch (err) {
       console.error('Bookmark failed:', err);
       setBookmarked(!nowBookmarked); // rollback
